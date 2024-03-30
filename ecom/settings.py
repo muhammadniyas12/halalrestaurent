@@ -86,7 +86,7 @@ DATABASES = {
 '''
 import dj_database_url
 DATABASES={
-    'default':dj_database_url.parse('postgres://restaurentdb_user:TZGK0GfmNVhb9QUJ6y8HTYxTncRWCncV@dpg-co3pfcq1hbls73bl663g-a.oregon-postgres.render.com/restaurentdb')
+    'default':dj_database_url.parse('')
 }
 
 # Password validation
