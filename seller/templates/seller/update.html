@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            background-color: cadetblue;
+
+        }
+
+        .up{
+            margin-top: 100px;
+            margin-left: 400px;
+            height: 200px;
+            width: 350px;
+
+        }
+        label{
+            width: 400px;
+        }
+        input{
+            width: 200px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+        <div class="up">
+
+            <form action=""     method="post" enctype="multipart/form-data"   >
+
+                {% csrf_token %}
+              
+                <table>
+              
+               <label for="">NAME:</label>
+               <input type="text" name="name" value="{{pdt.name}}"><br><br>
+               
+              
+               <label for="">PRICE:</label>
+               <input type="number"  name="price"  value="{{pdt.price}}"><br><BR></BR>
+              
+               
+               <label for="">DESCRIPTION:</label>
+               <input type="text" name="description" value="{{pdt.description}}"><br><br>
+              
+              
+              
+              
+                  
+              
+              <label for="">IMAGE:</label>
+               <input type="file" name="image" ><br><br>
+                <select name="category" id="">
+                  {% for i in categorys %}
+                  <option value="{{i.id}}">{{i.name}}</option>
+                  {% endfor %}
+                </select>
+              
+              
+                </table>
+              
+              
+              
+              
+               <button type="submit" class="btn btn-primary btn-lg" style="margin-left: 200px; height: 40px;  background-color: red; color: antiquewhite;">ADD PRODUCT</button>
+               
+              
+              
+              
+              
+              
+               
+               
+               
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+               
+              
+              
+              
+              </form>
+        </div>
+    
+</body>
+</html>

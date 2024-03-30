@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        th{
+            padding: 30px;
+             width: 90px;
+             height:20px;
+             text-decoration: none;
+             border-radius: 5PX;
+             border-collapse: inherit;
+             padding-left: 50px;
+             padding-top: 40px;
+
+        }
+         .container-fluid{
+            background-color: crimson;
+            width: 2500PX;
+            height: 40PX;
+            margin-right: 30px;
+         }
+         .col{
+            font-weight: 800;
+            height: 20PX;
+            margin-left: 400PX;
+            margin-top: 3PX;
+            font-size: xx-large;
+            color: white;
+         }
+         a{
+            padding-left: 50px;
+            margin-left: 50PX;
+            margin-top: 40px;
+            padding: 30px;
+         }
+         h4{
+            margin-top: 0%;
+            margin-left: 10px;
+            font-style: oblique;
+         }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <h4>HALLAL RESTAURANT</h4>
+                    </div>
+                </div>
+            </div>
+                    <th><a href="{% url 'seller:viewpdt' %}">VIEWPRODUCT</a></th><br><br>
+
+                </div>
+               </div>
+                    <th><a href="{% url 'seller:adpdt' %}" style="margin-top: 10px;">ADDPRODUCT</a></th>
+
+                </div>
+               </div>
+                    <th><a href="{% url 'seller:update' %}">UPDATE</a></th>
+
+                </div>
+               </div>
+               <img src="{% static 'images/halal.jpg' %}" alt="">
+
+        </tr>
+    </table>
+    
+</body>
+</html>

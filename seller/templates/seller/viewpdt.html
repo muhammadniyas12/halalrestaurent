@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <style>
+
+    body{
+         background-color:white;
+        width: 100%;
+    }
+
+    .vi{
+
+        margin-left: 50px;
+        margin-top: 60px;
+    }
+
+ 
+   
+    
+    table td{
+      width: 200px;
+      text-align: center;
+
+
+    }
+    img{
+      height: 150px;
+      width: 150px;
+    }
+    h1{
+      margin-top: 10px;
+      font-weight: 900;
+      font-style: oblique;
+    }
+    .container-fluid{
+      background-color:red;
+      color: white;
+      margin-top: 20px;
+      width: 1100px;
+      margin-left: 60px;
+    }
+    a{
+      background-color: red;
+      color: white;
+      width: 70%;
+    }
+    img{
+      background-color: brown;
+      height: 180px;
+    }
+  </style>
+</head>
+<body> 
+
+       <button><a href="{% url 'seller:adpdt'%}">ADDPRODUCT</a></button>
+      <div class="vi">
+        <div class="container-fluid">
+          <h1  style="text-align: center;  margin-top: 1PX;">  RESTAURANT  PRODUCTS</h1>
+        </div>
+          <table>
+                <!-- <div class="td"> -->
+              <tr>
+                  <td>NAME</td>
+                  <td>PRICE</td>
+                  <td>DESCRIPTION</td>
+                  <td>IMAGES</td>
+                  <td>UPDATE</td>
+                  <td>DELETE</td>
+      
+      
+              </tr>
+                <!-- </div> -->
+      
+      
+      
+              </tr>
+              {%  for i in products %}
+              <tr>
+                  <td>{{i.name}}</td>
+                  <td>{{i.price}}</td>
+                  <td>{{i.description}}</td>
+                  <td><img src="{{i.image.url}}" alt=""></td>
+                  <td><a href="{% url 'seller:updatepdt' i.id%}" style="background-color: black;">UPDATE</a></td>
+                  <td><a href="{% url 'seller:deletepdt' i.id%}" style="background-color:black;">DELETE</a></td>
+             
+                  
+      
+      
+      
+               
+                
+              </tr>
+                 {% endfor %}
+          </table>
+        
+   
+    </div>
+  
+
+           
+        
+
+
+
+
+
+
+
+   
+
+    
+</body>
+</html>
