@@ -86,7 +86,7 @@ DATABASES = {
 '''
 import dj_database_url
 DATABASES={
-    'default':dj_database_url.parse('')
+    'default':dj_database_url.parse('postgres://ecomdb_lz9g_user:qa6Z4WCi9Df5tj55WEI9sCJL6Z1u8RKZ@dpg-co3rd2779t8c738r3mig-a.oregon-postgres.render.com/ecomdb_lz9g')
 }
 
 # Password validation
